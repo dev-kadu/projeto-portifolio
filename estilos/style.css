@@ -120,6 +120,9 @@ div#social a:hover {
 }
 
 section#detalhes {
+  background-color: var(--fundo-card);
+  padding: 20px;
+  border-radius: 5px;
   grid-column: 2;
 }
 
@@ -228,11 +231,73 @@ article h2 {
   color: var(--texto);
 }
 
+#projeto-container {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 1.5rem;
+}
+
+#projeto-container .projeto {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--fundo-principal);
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 5px solid var(--destaque-inverso);
+  transition: border-left-width 0.3s, border-color 0.3s;
+}
+
+#projeto-container .projeto:hover {
+  border-left-width: 1rem;
+  cursor: pointer;
+  border-color: var(--destaque);
+}
+
+#projeto-container .projeto > img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: var(--destaque);
+  color: var(--texto-inverso);
+  text-align: center;
+  padding: 1.5rem;
+}
+
+footer a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--texto);
+}
+
+footer a:hover {
+  color: var(--destaque-inverso);
+}
 
 
 @media screen and (min-width: 768px) {
+  section {
+    max-width: 800px;
+    margin: auto;
+    padding: 2rem;
+  }
   #skill-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  #projeto-container .projeto {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  #projeto-container .fotos {
+
+    max-width: 40%;
   }
 }
 
