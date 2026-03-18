@@ -18,6 +18,16 @@
   --font-principal: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+body.escuro {
+  --fundo-principal: #222222;
+  --texto: #e0e0e0;
+  --texto-inverso: #333333;
+  --destaque: darkcyan;
+  --destaque-inverso: lightcyan;
+  --fundo-card: #444444;
+  --font-principal: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
